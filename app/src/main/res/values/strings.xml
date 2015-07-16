@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">iSysClient</string>
+    <string name="settings">Ustawienia</string>
+    <string name="help">Pomoc</string>
+    <string name="title_event_detail">Tytuł</string>
+</resources>
