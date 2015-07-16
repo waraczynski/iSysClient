@@ -74,7 +74,7 @@ public class EventListActivity extends FragmentActivity
                 startActivity(detailIntent);
                 return true;
             case R.id.help:
-                Toast.makeText(EventListActivity.this, "Pomoc Test Toast", Toast.LENGTH_SHORT).show();
+                Toast.makeText(EventListActivity.this, "Test Toast", Toast.LENGTH_SHORT).show();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
