@@ -1,5 +1,5 @@
 # iSysClient
-This is a project of GUI for web application iSys.
+This is a project of Android GUI for web application iSys.
 
 To do:
 - transfer data with definitions of modules groups
