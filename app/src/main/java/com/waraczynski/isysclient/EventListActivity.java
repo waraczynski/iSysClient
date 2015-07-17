@@ -25,8 +25,7 @@ import android.widget.Toast;
  * {@link EventListFragment.Callbacks} interface
  * to listen for item selections.
  */
-public class EventListActivity extends FragmentActivity
-        implements EventListFragment.Callbacks {
+public class EventListActivity extends FragmentActivity implements EventListFragment.Callbacks {
 
     /**
      * Whether or not the activity is in two-pane mode, i.e. running on a tablet
@@ -35,7 +34,8 @@ public class EventListActivity extends FragmentActivity
     private boolean mTwoPane;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_list);
 
@@ -57,7 +57,8 @@ public class EventListActivity extends FragmentActivity
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
         // Inflate the menu items for use in the action bar
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.basic_menu, menu);
