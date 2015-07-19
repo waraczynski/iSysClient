@@ -3,4 +3,8 @@
     <string name="settings">Ustawienia</string>
     <string name="help">Pomoc</string>
     <string name="title_event_detail">Tytuł</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
 </resources>
