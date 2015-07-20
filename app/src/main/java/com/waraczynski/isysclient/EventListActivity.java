@@ -8,7 +8,6 @@ import android.view.MenuItem;
 import android.view.MenuInflater;
 import android.widget.Toast;
 
-
 /**
  * An activity representing a list of Events. This activity
  * has different presentations for handset and tablet-size devices. On
