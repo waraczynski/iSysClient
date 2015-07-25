@@ -2,7 +2,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    android:background="#f4f4f4" >
+    android:background="#DAE4F8" >
 
     <ExpandableListView
         android:id="@+id/modules_list_view"

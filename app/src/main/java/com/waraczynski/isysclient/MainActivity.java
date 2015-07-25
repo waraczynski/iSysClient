@@ -20,9 +20,11 @@ import android.widget.Toast;
 
 // e    xtends ActionBarActivity
 public class MainActivity extends Activity  {
+    iSysMenuData iSysMenu;
     ExpandableListAdapter modules_list_adapter;
     ExpandableListView modules_list_view;
     List<String> modules_list_groups;
+    List<String> group_items;
     HashMap<String, List<String>> modules_list_items;
 
     @Override
@@ -33,7 +35,6 @@ public class MainActivity extends Activity  {
         // get the listview
         modules_list_view = (ExpandableListView) findViewById(R.id.modules_list_view);
 
-        // preparing list data
         prepareListData();
 
         modules_list_adapter = new ExpandableListAdapter(this, modules_list_groups, modules_list_items);
@@ -46,39 +47,18 @@ public class MainActivity extends Activity  {
         modules_list_groups = new ArrayList<String>();
         modules_list_items = new HashMap<String, List<String>>();
 
-        // Adding child data
-        modules_list_groups.add("Top 250");
-        modules_list_groups.add("Now Showing");
-        modules_list_groups.add("Coming Soon..");
+        iSysMenu = new iSysMenuData();
+        iSysMenu.getJSONFromUrl("http://isys.waraczynski.com/Android/integration.php");
 
-        // Adding child data
-        List<String> top250 = new ArrayList<String>();
-        top250.add("The Shawshank Redemption");
-        top250.add("The Godfather");
-        top250.add("The Godfather: Part II");
-        top250.add("Pulp Fiction");
-        top250.add("The Good, the Bad and the Ugly");
-        top250.add("The Dark Knight");
-        top250.add("12 Angry Men");
+        for (int i = 0;i<3;i++) {
+            modules_list_groups.add("Grupa["+i+"]");
 
-        List<String> nowShowing = new ArrayList<String>();
-        nowShowing.add("The Conjuring");
-        nowShowing.add("Despicable Me 2");
-        nowShowing.add("Turbo");
-        nowShowing.add("Grown Ups 2");
-        nowShowing.add("Red 2");
-        nowShowing.add("The Wolverine");
-
-        List<String> comingSoon = new ArrayList<String>();
-        comingSoon.add("2 Guns");
-        comingSoon.add("The Smurfs 2");
-        comingSoon.add("The Spectacular Now");
-        comingSoon.add("The Canyons");
-        comingSoon.add("Europa Report");
-
-        modules_list_items.put(modules_list_groups.get(0), top250);
-        modules_list_items.put(modules_list_groups.get(1), nowShowing);
-        modules_list_items.put(modules_list_groups.get(2), comingSoon);
+            group_items = new ArrayList<String>();
+            for (int j = 0;j<5;j++) {
+                group_items.add("Pozycja[" + i + "," + j + "]");
+            }
+            modules_list_items.put(modules_list_groups.get(i), group_items);
+        }
     }
 
     @Override

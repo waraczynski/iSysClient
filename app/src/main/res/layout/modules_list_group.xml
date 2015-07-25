@@ -3,15 +3,17 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="8dp"
-    android:background="#000000">
+    android:background="#8A94A8">
 
 
     <TextView
         android:id="@+id/modules_list_group_name"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textSize="17dp"
-        android:textColor="#f9f93d" />
+        android:textSize="17dip"
+        android:textColor="#000000"
+        android:paddingLeft="50dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp" />
 
 </LinearLayout>
