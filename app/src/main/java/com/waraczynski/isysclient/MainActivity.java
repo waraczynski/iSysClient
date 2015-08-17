@@ -18,6 +18,8 @@ import android.widget.ExpandableListView.OnGroupCollapseListener;
 import android.widget.ExpandableListView.OnGroupExpandListener;
 import android.widget.Toast;
 
+import org.json.JSONObject;
+
 // e    xtends ActionBarActivity
 public class MainActivity extends Activity  {
     iSysMenuData iSysMenu;
@@ -44,11 +46,13 @@ public class MainActivity extends Activity  {
     }
 
     private void prepareListData() {
+        JSONObject jObj = null;
+
         modules_list_groups = new ArrayList<String>();
         modules_list_items = new HashMap<String, List<String>>();
 
         iSysMenu = new iSysMenuData();
-        iSysMenu.getJSONFromUrl("http://isys.waraczynski.com/Android/integration.php");
+        jObj = iSysMenu.getJSONFromUrl("http://isys.waraczynski.com/Android/integration.php");
 
         for (int i = 0;i<3;i++) {
             modules_list_groups.add("Grupa["+i+"]");
